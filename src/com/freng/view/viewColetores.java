@@ -73,6 +73,9 @@ public class viewColetores extends javax.swing.JFrame {
         jTextField11 = new javax.swing.JTextField();
         jTextField12 = new javax.swing.JTextField();
         jLayeredPane1 = new javax.swing.JLayeredPane();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jComboBox8 = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jTextField13 = new javax.swing.JTextField();
@@ -182,15 +185,42 @@ public class viewColetores extends javax.swing.JFrame {
         jLayeredPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder("Status do Coletor")));
         jLayeredPane1.setToolTipText("");
 
+        jLabel26.setText("Status");
+
+        jLabel27.setText("Status");
+
+        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox8.setAction(jTextField2.getAction());
+
+        jLayeredPane1.setLayer(jLabel26, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jLabel27, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jComboBox8, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
         jLayeredPane1Layout.setHorizontalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 195, Short.MAX_VALUE)
+            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBox8, 0, 147, Short.MAX_VALUE)
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel26)
+                            .addComponent(jLabel27))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 184, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                .addComponent(jLabel26)
+                .addContainerGap())
         );
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Chip GPRS"));
@@ -204,8 +234,6 @@ public class viewColetores extends javax.swing.JFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-
-        jLabel24.setIcon(new javax.swing.ImageIcon("/home/phelype/Imagens/Icons Patrimonio/sinal.png")); // NOI18N
 
         jLabel25.setText("Operadora:");
 
@@ -250,22 +278,28 @@ public class viewColetores extends javax.swing.JFrame {
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        jButton2.setIcon(new javax.swing.ImageIcon("/home/phelype/Imagens/Icons Patrimonio/icons/iloveimg-resized/printer icon.png")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon("/home/phelype/Pictures/Icons Patrimonio/icons/iloveimg-resized/printer icon.png")); // NOI18N
         jButton2.setText("Imprimir Histórico");
+        jButton2.setEnabled(false);
 
-        jButton3.setIcon(new javax.swing.ImageIcon("/home/phelype/Imagens/Icons Patrimonio/icons/iloveimg-resized/iditar.png")); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon("/home/phelype/Pictures/Icons Patrimonio/icons/iloveimg-resized/iditar.png")); // NOI18N
         jButton3.setText("Editar");
+        jButton3.setEnabled(false);
 
-        jButton4.setIcon(new javax.swing.ImageIcon("/home/phelype/Imagens/Icons Patrimonio/icons/iloveimg-resized/cancel.png")); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon("/home/phelype/Pictures/Icons Patrimonio/icons/iloveimg-resized/cancel.png")); // NOI18N
         jButton4.setText("Cancelar");
+        jButton4.setEnabled(false);
 
-        jButton5.setIcon(new javax.swing.ImageIcon("/home/phelype/Imagens/Icons Patrimonio/icons/iloveimg-resized/sirene.png")); // NOI18N
+        jButton5.setFont(new java.awt.Font("Open Sans", 0, 8)); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon("/home/phelype/Pictures/Icons Patrimonio/icons/iloveimg-resized/sirene.png")); // NOI18N
         jButton5.setText("Nova Ordem de Serviço");
+        jButton5.setEnabled(false);
 
-        jButton6.setIcon(new javax.swing.ImageIcon("/home/phelype/Imagens/Icons Patrimonio/icons/iloveimg-resized/livros.png")); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon("/home/phelype/Pictures/Icons Patrimonio/icons/iloveimg-resized/livros.png")); // NOI18N
         jButton6.setText("Histórico");
+        jButton6.setEnabled(false);
 
-        jButton7.setIcon(new javax.swing.ImageIcon("/home/phelype/Imagens/Icons Patrimonio/sair.png")); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon("/home/phelype/Pictures/Icons Patrimonio/sair.png")); // NOI18N
         jButton7.setText("Sair");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -362,30 +396,29 @@ public class viewColetores extends javax.swing.JFrame {
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addComponent(jLabel10)
                                                 .addGap(5, 5, 5)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jLabel21))))
                 .addGap(12, 12, 12))
             .addGroup(layout.createSequentialGroup()
-                .addGap(533, 533, 533)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton7)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -484,13 +517,13 @@ public class viewColetores extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7))
-                .addContainerGap(21, Short.MAX_VALUE))
+                    .addComponent(jButton7)
+                    .addComponent(jButton5)
+                    .addComponent(jButton4)
+                    .addComponent(jButton3)
+                    .addComponent(jButton2))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         setSize(new java.awt.Dimension(1332, 697));
@@ -547,6 +580,7 @@ public class viewColetores extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox7;
+    private javax.swing.JComboBox<String> jComboBox8;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser2;
     private com.toedter.calendar.JDateChooser jDateChooser3;
@@ -569,6 +603,8 @@ public class viewColetores extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

@@ -27,7 +27,7 @@ public class viewPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        uttonColetores = new javax.swing.JButton();
+        jButtonColetores = new javax.swing.JButton();
         jButtonImpressoras = new javax.swing.JButton();
         jButtonRelacoes = new javax.swing.JButton();
         jButtonComputadores = new javax.swing.JButton();
@@ -44,20 +44,29 @@ public class viewPrincipal extends javax.swing.JFrame {
         setTitle("Patrimônio");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        uttonColetores.setIcon(new javax.swing.ImageIcon("/home/phelype/Imagens/Icons Patrimonio/iloveimg-resize/ikon.jpg")); // NOI18N
-        uttonColetores.setText("  Coletores");
-        getContentPane().add(uttonColetores, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 36, 130, -1));
+        jButtonColetores.setIcon(new javax.swing.ImageIcon("/home/phelype/Pictures/Icons Patrimonio/iloveimg-resize/ikon.jpg")); // NOI18N
+        jButtonColetores.setText("  Coletores");
+        jButtonColetores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonColetoresActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonColetores, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 36, 130, -1));
 
-        jButtonImpressoras.setIcon(new javax.swing.ImageIcon("/home/phelype/Imagens/Icons Patrimonio/iloveimg-resiz/Seiko_MPUL465.jpg")); // NOI18N
+        jButtonImpressoras.setIcon(new javax.swing.ImageIcon("/home/phelype/Pictures/Icons Patrimonio/iloveimg-resize/Seiko_MPUL465.jpg")); // NOI18N
         jButtonImpressoras.setText("Impressoras");
         getContentPane().add(jButtonImpressoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 130, -1));
 
-        jButtonRelacoes.setIcon(new javax.swing.ImageIcon("/home/phelype/Imagens/Icons Patrimonio/iloveimg-resiz/Search-icon.png")); // NOI18N
         jButtonRelacoes.setText("Relações");
+        jButtonRelacoes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRelacoesActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonRelacoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 130, 40));
 
         jButtonComputadores.setText("Computador");
-        getContentPane().add(jButtonComputadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 90, -1));
+        getContentPane().add(jButtonComputadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 100, -1));
 
         jButtonBaterias.setText("Baterias");
         jButtonBaterias.addActionListener(new java.awt.event.ActionListener() {
@@ -65,14 +74,13 @@ public class viewPrincipal extends javax.swing.JFrame {
                 jButtonBateriasActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonBaterias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 90, -1));
+        getContentPane().add(jButtonBaterias, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 100, -1));
 
         jButtonCadastros.setText("Cadastros");
-        getContentPane().add(jButtonCadastros, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 90, -1));
+        getContentPane().add(jButtonCadastros, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 100, -1));
 
-        jButtonSair.setIcon(new javax.swing.ImageIcon("/home/phelype/Imagens/Icons Patrimonio/sair.png")); // NOI18N
         jButtonSair.setText("Sair");
-        getContentPane().add(jButtonSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 90, 30));
+        getContentPane().add(jButtonSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 90, 30));
 
         jMenu1.setText("Arquivo");
 
@@ -95,7 +103,7 @@ public class viewPrincipal extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        setSize(new java.awt.Dimension(294, 259));
+        setSize(new java.awt.Dimension(284, 245));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -106,6 +114,16 @@ public class viewPrincipal extends javax.swing.JFrame {
     private void jButtonBateriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBateriasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonBateriasActionPerformed
+
+    private void jButtonColetoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonColetoresActionPerformed
+        viewColetores coletores = new viewColetores();
+        coletores.setVisible(true);
+        
+    }//GEN-LAST:event_jButtonColetoresActionPerformed
+
+    private void jButtonRelacoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRelacoesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonRelacoesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -145,6 +163,7 @@ public class viewPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonBaterias;
     private javax.swing.JButton jButtonCadastros;
+    private javax.swing.JButton jButtonColetores;
     private javax.swing.JButton jButtonComputadores;
     private javax.swing.JButton jButtonImpressoras;
     private javax.swing.JButton jButtonRelacoes;
@@ -154,6 +173,5 @@ public class viewPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JButton uttonColetores;
     // End of variables declaration//GEN-END:variables
 }
