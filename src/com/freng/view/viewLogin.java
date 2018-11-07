@@ -44,10 +44,6 @@ public class viewLogin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/home/phelype/Pictures/Icons Patrimonio/SS/user.png")); // NOI18N
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("/home/phelype/Pictures/Icons Patrimonio/SS/password.png")); // NOI18N
-
         jButtonEntrar.setText("Entrar");
         jButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
