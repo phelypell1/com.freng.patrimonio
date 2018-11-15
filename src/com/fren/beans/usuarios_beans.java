@@ -10,33 +10,16 @@ package com.fren.beans;
  * @author phelype
  */
 public class usuarios_beans {
-    
     private int id_usuarios;
-    private int login_id;
-    private int perfil_id;
+    private LoginsBeans login_id;
+    private perfil_usuariobeans perfil_id;
     private String nome_user;
-    private boolean ativo;
+    private int ativo;
     private String data_cadastro;
     private String email;
     private String cargo;
-    private String regio;
-    private String imagem;
-
-    public usuarios_beans() {
-    }
-
-    public usuarios_beans(int id_usuarios, int login_id, int perfil_id, String nome_user, boolean ativo, String data_cadastro, String email, String cargo, String regio, String imagem) {
-        this.id_usuarios = id_usuarios;
-        this.login_id = login_id;
-        this.perfil_id = perfil_id;
-        this.nome_user = nome_user;
-        this.ativo = ativo;
-        this.data_cadastro = data_cadastro;
-        this.email = email;
-        this.cargo = cargo;
-        this.regio = regio;
-        this.imagem = imagem;
-    }
+    private String regiao;
+    private int imagem;
 
     /**
      * @return the id_usuarios
@@ -55,28 +38,28 @@ public class usuarios_beans {
     /**
      * @return the login_id
      */
-    public int getLogin_id() {
+    public LoginsBeans getLogin_id() {
         return login_id;
     }
 
     /**
      * @param login_id the login_id to set
      */
-    public void setLogin_id(int login_id) {
+    public void setLogin_id(LoginsBeans login_id) {
         this.login_id = login_id;
     }
 
     /**
      * @return the perfil_id
      */
-    public int getPerfil_id() {
+    public perfil_usuariobeans getPerfil_id() {
         return perfil_id;
     }
 
     /**
      * @param perfil_id the perfil_id to set
      */
-    public void setPerfil_id(int perfil_id) {
+    public void setPerfil_id(perfil_usuariobeans perfil_id) {
         this.perfil_id = perfil_id;
     }
 
@@ -97,14 +80,14 @@ public class usuarios_beans {
     /**
      * @return the ativo
      */
-    public boolean isAtivo() {
+    public int getAtivo() {
         return ativo;
     }
 
     /**
      * @param ativo the ativo to set
      */
-    public void setAtivo(boolean ativo) {
+    public void setAtivo(int ativo) {
         this.ativo = ativo;
     }
 
@@ -151,31 +134,32 @@ public class usuarios_beans {
     }
 
     /**
-     * @return the regio
+     * @return the regiao
      */
-    public String getRegio() {
-        return regio;
+    public String getRegiao() {
+        return regiao;
     }
 
     /**
-     * @param regio the regio to set
+     * @param regiao the regiao to set
      */
-    public void setRegio(String regio) {
-        this.regio = regio;
+    public void setRegiao(String regiao) {
+        this.regiao = regiao;
     }
 
     /**
      * @return the imagem
      */
-    public String getImagem() {
+    public int getImagem() {
         return imagem;
     }
 
     /**
      * @param imagem the imagem to set
      */
-    public void setImagem(String imagem) {
+    public void setImagem(int imagem) {
         this.imagem = imagem;
     }
+    
+    
 }
-

@@ -5,7 +5,9 @@
  */
 package com.freng.view;
 
-import com.freng.connection.MySqlConnection;
+import Connection.ConnectionFactory;
+import Connection.ConnectionFactoryUser;
+import java.sql.Connection;
 import javax.swing.JOptionPane;
 
 /**
@@ -13,16 +15,15 @@ import javax.swing.JOptionPane;
  * @author phelype
  */
 public class viewLogin extends javax.swing.JFrame {
-
+     
     /**
      * Creates new form viewLogin
      */
     public viewLogin() {
         initComponents();
-        MySqlConnection conn = new MySqlConnection();
-        conn.getConnection();
+
         
-       JOptionPane.showMessageDialog(null, "Conexao"+conn);
+       JOptionPane.showMessageDialog(null, "Conexao");
     }
 
     /**
@@ -108,6 +109,7 @@ public class viewLogin extends javax.swing.JFrame {
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
        viewPrincipal telaPrincipal = new viewPrincipal();
        telaPrincipal.setVisible(true);
+       Connection con = ConnectionFactoryUser.getConnection();
 
     }//GEN-LAST:event_jButtonEntrarActionPerformed
 

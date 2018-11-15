@@ -9,8 +9,7 @@ package com.fren.beans;
  *
  * @author phelype
  */
-public class perfil_Usuarios_Beans {
-    
+public class perfil_usuariobeans {
     private int id_perfil;
     private String nome_perfil;
     private String data_cad;
@@ -56,6 +55,7 @@ public class perfil_Usuarios_Beans {
     public void setData_cad(String data_cad) {
         this.data_cad = data_cad;
     }
+    
     
     
 }
